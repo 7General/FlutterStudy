@@ -129,26 +129,42 @@ class _RouteProSampleState extends State<RouteProSample> {
                 fontSize: 30.0,
                 color: Colors.red,
               ),
+              
             ),
             new Builder(builder: (BuildContext context) {
               return new RaisedButton(
+              
                 child: Text(
                   "debug",
-                  style: new TextStyle(color: Colors.red, fontSize: 20.0),
+                  style: new TextStyle(
+                    color: Colors.red,
+                    fontSize: 20.0,
+                  ),
                 ),
                 highlightColor: Colors.deepPurple,
                 disabledColor: Colors.cyan,
+                
                 onPressed: () {
                   print("onpredds");
                   if (_userPhoneController.text.toString() == "10086" &&
                       _userPasswordController.text.toString() == "10086") {
-                    Scaffold.of(context).showSnackBar(new SnackBar(content: new Text("校验通过")));
+                    Scaffold.of(context)
+                        .showSnackBar(new SnackBar(content: new Text("校验通过")));
                   } else {
-                    Scaffold.of(context).showSnackBar(new SnackBar(content: new Text("校验有问题")));
+                    Scaffold.of(context)
+                        .showSnackBar(new SnackBar(content: new Text("校验有问题")));
                     onTextClear();
                   }
                 },
               );
+            }),
+            new Builder(builder: (BuildContext context){
+              // return new Image.network("https://p1.ssl.qhmsg.com/dr/220__/t01d5ccfbf9d4500c75.jpg",width:800,height: 100);
+              return new Image.asset('images/aaa.png',width: 50.0,height: 50.0);
+              // return new Image(
+              //   image: new AssetImage('images/aaa.png',),
+              // );
+              
             }),
           ],
         ),
