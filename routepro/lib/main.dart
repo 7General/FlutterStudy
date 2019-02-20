@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'title',
       home: RouteProSample(),
-      // routes: <String, WidgetBuilder> {
-      //   '/a': (BuildContext context) => new MyPage(title: 'A 页面'),
-      //   '/b': (BuildContext context) => new MyPage(title: 'B 页面'),
-      //   '/c': (BuildContext context) => new WebViewPage('webviewpage'),
-      // },
+      routes: <String, WidgetBuilder> {
+        '/a': (BuildContext context) => new MyPage(title: 'A 页面'),
+        '/b': (BuildContext context) => new MyPage(title: 'B 页面'),
+        '/c': (BuildContext context) => new WebViewPage('webviewpage'),
+      },
     );
   }
 }
