@@ -31,6 +31,15 @@ class _RouteProSampleState extends State<RouteProSample> {
   final TextEditingController _userPasswordController =
       new TextEditingController();
 
+  _getListData() {
+    List<Widget> widgets = [];
+    for (int i = 0; i < 1; i++) {
+      widgets
+          .add(Padding(padding: EdgeInsets.all(10.0), child: Text("Row $i")));
+    }
+    return widgets;
+  }
+
   void onTextClear() {
     setState(() {
       _userPhoneController.text = "";
@@ -129,11 +138,9 @@ class _RouteProSampleState extends State<RouteProSample> {
                 fontSize: 30.0,
                 color: Colors.red,
               ),
-              
             ),
             new Builder(builder: (BuildContext context) {
               return new RaisedButton(
-              
                 child: Text(
                   "debug",
                   style: new TextStyle(
@@ -143,7 +150,6 @@ class _RouteProSampleState extends State<RouteProSample> {
                 ),
                 highlightColor: Colors.deepPurple,
                 disabledColor: Colors.cyan,
-                
                 onPressed: () {
                   print("onpredds");
                   if (_userPhoneController.text.toString() == "10086" &&
@@ -158,13 +164,37 @@ class _RouteProSampleState extends State<RouteProSample> {
                 },
               );
             }),
-            new Builder(builder: (BuildContext context){
-              // return new Image.network("https://p1.ssl.qhmsg.com/dr/220__/t01d5ccfbf9d4500c75.jpg",width:800,height: 100);
-              return new Image.asset('images/aaa.png',width: 50.0,height: 50.0);
+            new Builder(builder: (BuildContext context) {
+              // return new Image.network("https://upload-images.jianshu.io/upload_images/1416781-87057fd7a00f66ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/344",width:800,height: 100);
+              // return new Image.asset('images/aaa.png',width: 50.0,height: 50.0);
               // return new Image(
               //   image: new AssetImage('images/aaa.png',),
               // );
-              
+              return new Container(
+                child: Column(
+                  children: <Widget>[
+                    // RaisedButton(
+                    //   child: Text("lishi"),
+                    //   onPressed: () {
+                    //     print("====================");
+                    //   },
+                    // ),
+                    // Image.network(
+                    //     "https://upload-images.jianshu.io/upload_images/1416781-87057fd7a00f66ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/344",
+                    //     width: 800,
+                    //     height: 100),
+                    // Image.asset('images/aaa.png', width: 50.0, height: 50.0),
+                    // Image(
+                    //   image: new AssetImage('images/aaa.png'),
+                    // ),
+                    Text("text",
+                        style: new TextStyle(
+                          fontSize: 20.0,
+                        )),
+                    // ListView(children: _getListData()),
+                  ],
+                ),
+              );
             }),
           ],
         ),
@@ -208,7 +238,7 @@ class _RouteProSampleState extends State<RouteProSample> {
       //         child: new Text("按钮"),
       //         color: Colors.red,
       //         onPressed: (){
-      //           print('点击了按钮');
+      //           print('点击���按钮');
       //         },
 
       //         padding: EdgeInsets.only(top: 100,left: 100),
