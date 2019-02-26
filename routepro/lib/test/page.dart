@@ -12,6 +12,17 @@ class WebViewPage extends StatefulWidget {
 
 
 class _WebViewPageState extends State<WebViewPage> {
+
+_getListData() {
+    List<Widget> widgets = [];
+    for (int i = 0; i < 1; i++) {
+      widgets
+          .add(Padding(padding: EdgeInsets.all(10.0), child: Text("Row $i")));
+    }
+    return widgets;
+  }
+
+
   @override
   Widget build(BuildContext context){
   
@@ -35,12 +46,28 @@ class _WebViewPageState extends State<WebViewPage> {
          children: <Widget>[
           Icon(
             Icons.warning,
-            size: 22.0,
+            size: 100.0,
             ),
           SizedBox(
-            width: 5.0,
+            width: 50.0,
           ),
-          Text('模拟器'),
+          Text(
+            '模拟器',
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
+          
+            ),
+          RaisedButton(
+            child: Text(
+              "button",
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+              
+            ),
+          )
+         
         ],
        )
      ),

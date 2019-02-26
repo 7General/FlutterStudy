@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'welcome_page/index.dart';
 import 'test/page.dart';
+import 'test/listViewController.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
         '/a': (BuildContext context) => new MyPage(title: 'A 页面'),
         '/b': (BuildContext context) => new MyPage(title: 'B 页面'),
         '/c': (BuildContext context) => new WebViewPage('webviewpage'),
+        '/d': (BuildContext context) => new WebViewPage('listviewPage'),
       },
     );
   }
@@ -152,6 +154,7 @@ class _RouteProSampleState extends State<RouteProSample> {
                 disabledColor: Colors.cyan,
                 onPressed: () {
                   print("onpredds");
+                  Navigator.of(context).pushNamed('/d');
                   if (_userPhoneController.text.toString() == "10086" &&
                       _userPasswordController.text.toString() == "10086") {
                     Scaffold.of(context)
