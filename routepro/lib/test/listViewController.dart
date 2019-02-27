@@ -97,7 +97,7 @@ class _listViewController extends State<listViewController> {
             onTap: () {
               print("row $position");
             },
-            onLongPress: (){
+            onLongPress: () {
               print("长按了");
             },
             child: new Row(

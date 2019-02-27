@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 class WebViewPage extends StatefulWidget {
-  
   final String title;
 
   WebViewPage(this.title);
   createState() => _WebViewPageState();
 }
 
-
 class _WebViewPageState extends State<WebViewPage> {
-
-_getListData() {
+  _getListData() {
     List<Widget> widgets = [];
     for (int i = 0; i < 1; i++) {
       widgets
@@ -22,11 +18,8 @@ _getListData() {
     return widgets;
   }
 
-
   @override
-  Widget build(BuildContext context){
-  
-
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -34,7 +27,7 @@ _getListData() {
           IconButton(
             icon: Icon(Icons.playlist_play),
             tooltip: 'Air it',
-            onPressed: (){
+            onPressed: () {
               Navigator.of(context).pushNamed('/c');
               print('点击条状');
             },
@@ -42,12 +35,12 @@ _getListData() {
         ],
       ),
       body: Center(
-       child: Row(
-         children: <Widget>[
+          child: Row(
+        children: <Widget>[
           Icon(
             Icons.warning,
             size: 100.0,
-            ),
+          ),
           SizedBox(
             width: 50.0,
           ),
@@ -56,22 +49,17 @@ _getListData() {
             style: TextStyle(
               fontSize: 20.0,
             ),
-          
-            ),
+          ),
           RaisedButton(
             child: Text(
               "button",
               style: TextStyle(
                 fontSize: 20.0,
               ),
-              
             ),
           )
-         
         ],
-       )
-     ),
-     
+      )),
     );
   }
 }

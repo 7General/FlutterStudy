@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'welcome_page/index.dart';
 import 'test/page.dart';
 import 'test/listViewController.dart';
+import 'test/layoutIndex.dart';
+import 'test/expandStudy.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -17,6 +19,8 @@ class MyApp extends StatelessWidget {
         '/b': (BuildContext context) => new MyPage(title: 'B 页面'),
         '/c': (BuildContext context) => new WebViewPage('webviewpage'),
         '/d': (BuildContext context) => new listViewController('listviewPage'),
+        '/lay': (BuildContext context) => new layoutIndex('layoutIndex'),
+        '/ex': (BuildContext context) => new expandLayout('expandedStudy'),
       },
     );
   }
@@ -176,12 +180,20 @@ class _RouteProSampleState extends State<RouteProSample> {
               return new Container(
                 child: Column(
                   children: <Widget>[
-                    // RaisedButton(
-                    //   child: Text("lishi"),
-                    //   onPressed: () {
-                    //     print("====================");
-                    //   },
-                    // ),
+                    RaisedButton(
+                      child: Text("lishi"),
+                      onPressed: () {
+                        print("====================");
+                        Navigator.of(context).pushNamed('/lay');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text("expanded"),
+                      onPressed: () {
+                        print("====================");
+                        Navigator.of(context).pushNamed('/ex');
+                      },
+                    ),
                     // Image.network(
                     //     "https://upload-images.jianshu.io/upload_images/1416781-87057fd7a00f66ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/344",
                     //     width: 800,
