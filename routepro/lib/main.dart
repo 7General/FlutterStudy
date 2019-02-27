@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         '/a': (BuildContext context) => new MyPage(title: 'A 页面'),
         '/b': (BuildContext context) => new MyPage(title: 'B 页面'),
         '/c': (BuildContext context) => new WebViewPage('webviewpage'),
-        '/d': (BuildContext context) => new WebViewPage('listviewPage'),
+        '/d': (BuildContext context) => new listViewController('listviewPage'),
       },
     );
   }
