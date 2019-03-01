@@ -5,6 +5,8 @@ import 'test/page.dart';
 import 'test/listViewController.dart';
 import 'test/layoutIndex.dart';
 import 'test/expandStudy.dart';
+import 'test/workspaceDesk.dart';
+import 'tabbar/tabbarController.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
         '/d': (BuildContext context) => new listViewController('listviewPage'),
         '/lay': (BuildContext context) => new layoutIndex('layoutIndex'),
         '/ex': (BuildContext context) => new expandLayout('expandedStudy'),
+        '/w': (BuildContext context) => new workspaceDesk('workSpace'),
+        '/t': (BuildContext context) => new tabbarController('tabbar'),
       },
     );
   }
@@ -68,7 +72,7 @@ class _RouteProSampleState extends State<RouteProSample> {
           ),
         ],
       ),
-
+  
       body: new Center(
         // child: new Text (
         //   '我的text',
@@ -92,6 +96,7 @@ class _RouteProSampleState extends State<RouteProSample> {
         //   },
         // ),
         child: new Column(
+          
           children: <Widget>[
             new Text(
               "文本数据框",
@@ -192,6 +197,13 @@ class _RouteProSampleState extends State<RouteProSample> {
                       onPressed: () {
                         print("====================");
                         Navigator.of(context).pushNamed('/ex');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text("workspace"),
+                      onPressed: () {
+                        print("====================");
+                        Navigator.of(context).pushNamed('/t');
                       },
                     ),
                     // Image.network(
