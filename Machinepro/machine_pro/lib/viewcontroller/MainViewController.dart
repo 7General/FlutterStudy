@@ -8,7 +8,7 @@ class MainViewController extends StatefulWidget {
 
 class MainViewState extends State<MainViewController> {
 
- final List<String> dataSource = ["UILabel","UIButton","UITextFiled","UITableView"];
+ final List<String> dataSource = ["UILabel","UIButton","UITextFiled","UITableView","UIWebView"];
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,9 @@ class MainViewState extends State<MainViewController> {
           return GestureDetector(
             onTap: (){
               print("=====点击的行 $index");
+              if (index == 0) {
+                Navigator.of(context).pushNamed('/label');
+              }
             },
             child: new Container(
               color: const Color(0xFF0099ff),

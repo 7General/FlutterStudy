@@ -9,8 +9,8 @@ class TabBarViewController extends StatefulWidget {
 class TabBarViewState extends State<TabBarViewController> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    MainViewController(),
-    MineViewController(),
+    MainViewController(),// home
+    MineViewController(), // mine 
   ];
 
   @override
