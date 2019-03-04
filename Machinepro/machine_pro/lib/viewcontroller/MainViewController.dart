@@ -25,6 +25,9 @@ class MainViewState extends State<MainViewController> {
               if (index == 0) {
                 Navigator.of(context).pushNamed('/label');
               }
+              if (1 == index) {
+                Navigator.of(context).pushNamed('/button');
+              }
             },
             child: new Container(
               color: const Color(0xFF0099ff),
