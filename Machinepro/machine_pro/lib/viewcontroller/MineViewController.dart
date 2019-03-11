@@ -10,7 +10,7 @@ class MineViewState extends State<MineViewController> {
   @override
   void initState() {
     super.initState();
-    dataSource = ["清除缓存", '检查版本', '呱呱客服', '设置', '修改密码'];
+    dataSource = ["清除缓存", '检查版本', '客服', '设置', '修改密码'];
   }
 
   @override
@@ -45,7 +45,6 @@ class MineViewState extends State<MineViewController> {
                     ),
                   ],
                 ),
-                
               ),
             );
           } else {
