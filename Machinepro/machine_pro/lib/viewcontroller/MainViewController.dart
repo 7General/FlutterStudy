@@ -28,6 +28,9 @@ class MainViewState extends State<MainViewController> {
               if (1 == index) {
                 Navigator.of(context).pushNamed('/button');
               }
+              if (2 == index) {
+                Navigator.of(context).pushNamed('/textFiled');
+              }
             },
             child: new Container(
               color: const Color(0xFF0099ff),
