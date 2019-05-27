@@ -3,6 +3,7 @@ import 'package:machine_pro/main_menu/TabBarViewController.dart';
 import 'package:machine_pro/UIKit/UILabelViewController.dart';
 import 'package:machine_pro/UIKit/UIButtonViewController.dart';
 import 'package:machine_pro/UIKit/UITextFiledViewController.dart';
+import 'package:machine_pro/UIKit/UITableViewController.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/label': (BuildContext context) => new UILabelViewController("UILabel"),
         '/button': (BuildContext context) => new UIButtonViewController(),
         '/textFiled': (BuildContext context) => new UITextFiledViewController(),
+        '/table': (BuildContext context) => new UITableViewController(),
       },
     );
   }

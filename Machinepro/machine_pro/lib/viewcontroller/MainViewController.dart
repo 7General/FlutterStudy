@@ -31,6 +31,9 @@ class MainViewState extends State<MainViewController> {
               if (2 == index) {
                 Navigator.of(context).pushNamed('/textFiled');
               }
+              if (3 == index) {
+                Navigator.of(context).pushNamed('/table');
+              }
             },
             child: new Container(
               color: const Color(0xFF0099ff),
